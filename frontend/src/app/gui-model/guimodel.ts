@@ -13,8 +13,23 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         }
+
                     ]
                 },
+                {
+                    "id": "ModuleForm",
+                    "title": "bockmic1Form",
+                    "formFieldList": [
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        },
+           
+                    ]
+                    },
+                
+
+
                 {
                     "id": "NotImplementedForm",
                     "title": "Not Implemented",
@@ -33,6 +48,7 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         }
+                        
                     ]
                 },
                 {
@@ -52,6 +68,7 @@ export class GuiModel {
                         }
                     ]
                 },
+                
                 {
                     "id": "ToDoForm",
                     "title": { default: "ToDo" },
@@ -85,8 +102,11 @@ export class GuiModel {
                             "type": "okButton",
                             "name": "Ok"
                         }
+                        
                     ]
                 },
+           
+
             ],
             "pageList": [
                 {
@@ -99,6 +119,16 @@ export class GuiModel {
                             "newRow": true
                         },
                         {
+                            // Hier fügen wir den neuen Button hinzu
+                            "type": "button",
+                            "name": { "default": "Module für bockmic1" },
+                            "icon": "fa-file-alt",
+                            "color": "wet-asphalt",
+                            "page": "modulePage",
+                            "width": 2
+                        },
+
+                        {
                             "type": "button",
                             "name": { default: "ToDo-List" },
                             "icon": "fa-file-alt",
@@ -109,6 +139,26 @@ export class GuiModel {
                         },
                     ]
                 },
+                {
+                    "id": "modulePage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": { default: "Neues Modul für Bockmic1" },
+                    "icon": "fa-user",
+                    "color": "green",
+                    "width": 2,
+                    "form" : {
+                    "form" : "ModuleForm"
+                    }
+                    },
+                    ]
+                    },
+
+
                 {
                     "id": "toDoPage",
                     "elementList": [
@@ -138,6 +188,11 @@ export class GuiModel {
                         }
                     ]
                 },
+
+
+                
+                
+                
             ]
         }
     };
